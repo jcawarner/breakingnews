@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<br><div class="container">
+	<div class="row">
+
+
+	{% for soc in social %}
+		{% for data in soc.data %}
+
+			<div class="col-sm-4">
+				<div class="card" style="width: 18rem;">
+				  <img src="{{data.image}}" class="card-img-top" alt="...">
+				  <div class="card-body">
+				    <h5 class="card-title">{{data.title}}</h5>
+				    <p class="card-text">{{data.description}}</p>
+				    <a href="{{data.url}}" class="btn btn-primary">Visit Website</a>
+				  </div>
+				</div><br><br>
+			</div>
+
+
+		{% endfor %}
+	{% endfor %}
+
+{% endblock %}
+
+	
+
+			
+
+	
